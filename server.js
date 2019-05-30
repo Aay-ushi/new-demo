@@ -30,11 +30,18 @@ app.use((req,res,next)=>{
 //     res.render('maintain.hbs');
 // });
 
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs',{
+        pageTitle: 'Projects'
+    })
+});
+
 app.get('/',(req,res)=>{
 // res.send('<h1>Hello Express</h1>');
 res.render('home.hbs');
 });
 
+ 
 app.get('/about',(req,res)=>{
     res.render('about.hbs');
 }); 
